@@ -1,0 +1,30 @@
+loop_a LDA count_a
+ADD one
+STA count_a
+LDA power
+ADD power
+STA power
+LDA count_a
+SUB y
+BRP done_a
+BRA loop_a
+done_a LDA count_b
+ADD one
+STA count_b
+LDA ans
+ADD temp
+STA ans
+LDA count_b
+SUB power
+BRP done_b
+BRA done_a
+done_b LDA ans
+OUT
+HLT
+temp DAT 14
+y DAT 2
+ans DAT 0
+power DAT 1
+count_a DAT 0
+count_b DAT 0
+one DAT 1

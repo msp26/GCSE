@@ -1,0 +1,22 @@
+INP
+STA a
+INP
+STA b
+loop LDA count
+ADD one
+STA count
+LDA ans
+ADD a
+STA ans
+LDA count
+SUB b
+BRP end
+BRA loop
+end LDA ans
+OUT
+HLT
+a DAT
+b DAT
+count DAT 0
+one DAT 1
+ans DAT 0
